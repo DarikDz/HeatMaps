@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Custom Overlays</title>
+    <link rel="stylesheet" href="src/css/style.css" type="text/css"></link>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuyfi0wkulbBZEY-kAwpmi3-RQvNb17cw&libraries=visualization&callback=initMap"></script>
+    <script src="js/index1.js"></script>
+  </head>
+  <body>
+    <div id="floating-panel">
+      <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+      <button onclick="changeGradient()">Change gradient</button>
+      <button onclick="changeRadius()">Change radius</button>
+      <button onclick="changeOpacity()">Change opacity</button>
+    </div>
+    <div id="floating-panel-izquierdo">
+
+        <label for="txtFechaInicio" class="control-label negro">Fecha inicio</label>
+        <input type="date" class="form-control" id="txtFechaInicio" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+        <br></br>
+        <label for="txtHoraInicio" class="control-label negro">Hora inicio</label>
+        <input type="time" class="form-control" id="txtHoraInicio" />
+        <br></br>
+        <label for="txtFechaFin" class="control-label negro">Fecha fin</label>
+        <input type="date" class="form-control" id="txtFechaFin" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+        <br></br>
+        <label for="txtHoraFin" class="control-label negro">Hora fin</label><br>
+        <input type="time" class="form-control" id="txtHoraFin" />
+        <br></br>
+     <input id="btnFiltrar" type="button" value="Get Heatmap">
+    </div>
+    <div id="map"></div>
+  </body>
+</html>
